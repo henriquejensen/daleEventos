@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        {% if page.banner == "verdade" %}
+            <style>
+                #container-slides {
+                    width: 730px;
+                    height: 460px;
+                    overflow: hidden;
+                    margin-left: 0px;
+                }
+                #slides {
+                    width: 2190px;
+                    height: 460px;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+                .slide {
+                    float: left;
+                    width: 730px;
+                    height: 460px;
+                }
+            </style>
+
+            <div id="container-slides">
+                <ul id="slides">
+                    <li class="slide"><img src="/assets/slider1.jpg" alt=""></li>
+                    <li class="slide"><img src="/assets/slider2.jpg" alt=""></li>
+                    <li class="slide"><img src="/assets/slider3.jpg" alt=""></li>
+                </ul>
+            </div>
+        {% endif %}
+
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
